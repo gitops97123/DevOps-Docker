@@ -9,44 +9,44 @@
 
 Docker is a containerization technology that allows you to quickly build, test and deploy applications as portable, self-sufficient containers that can run virtually anywhere.
 
-Follow these Steps  
+## Follow these Steps  
 
-Adding docker-ce repository. 
+## Adding docker-ce repository. 
 
     sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
     sudo dnf repolist -v 
 
-Removing **runc** and **podman** packages 
+## Removing **runc** and **podman** packages 
     
     sudo dnf remove runc podman* -y
 
-Installing  **docker-ce** packges
+## Installing  **docker-ce** packges
 
     sudo dnf install --nobest  docker-ce
 
-Installing **containerd.io** packages 
+## Installing **containerd.io** packages 
 
     sudo dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
 
-Stop and disable firewall setting. 
+## Stop and disable firewall setting. 
 
     sudo systemctl disable firewalld
     sudo systemctl stop firewalld 
 
-Start and enable docker service 
+## Start and enable docker service 
 
     sudo systemctl enable --now docker
 
-Checking docker service status 
+## Checking docker service status 
 
     systemctl is-active docker
     systemctl is-enabled docker
 
-Installing **docker-compose** packages.
+## Installing **docker-compose** packages.
 
 	curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
 
-Installing required-packages.
+## Installing required-packages.
 
 	sudo dnf install python3-pip
 	pip3.6 install docker-compose --user
@@ -87,19 +87,19 @@ An instance of an image is called a container. A container represents a runtime 
 It may not be the most appropriate comparison, but if you are a programmer, you can think of a Docker image as class and Docker container as an instance of a class.
 We can start, stop, remove, and manage a container with the docker container subcommand.
 
-Start a container
+## Start a container
 
     	docker container run -it ubuntu /bin/bash
 
-List running container 
+## List running container 
 
     	docker container ls 
     	docker container ls -a 
 
-Remove container
+## Remove container
 
     	docker container rm container_id 
 
-Remove stop container history.
+## emove stop container history.
 
     	docker container rm prune -f

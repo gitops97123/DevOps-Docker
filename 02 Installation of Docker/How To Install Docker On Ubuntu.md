@@ -10,35 +10,35 @@
 
 ## Follow these Steps
 
-Installing pre-requisites packages 
+## Installing pre-requisites packages 
 
     sudo apt update sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
-Adding GPG-KEY
+## Adding GPG-KEY
 
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
 
-Adding docker-ce repository
+## Adding docker-ce repository
  
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-Updating Packages
+## Updating Packages
 
 	sudo apt update
 
-Installing docker-ce packages 
+## Installing docker-ce packages 
 
 	sudo apt install docker-ce
 
-Mark as hold the docker version 
+## Mark as hold the docker version 
 
 	sudo apt-mark hold docker-ce
 
-Checking docker service status 
+## Checking docker service status 
 
 	sudo systemctl status docker
 
-Adding docker group in User account 
+## Adding docker group in User account 
 
 	sudo usermod -aG docker $USER
 
@@ -51,7 +51,7 @@ When a new Docker version is released you can update the package using the stand
 
 	sudo apt upgrade
 
-Uninstalling Docker: -
+## Uninstalling Docker: -
 
 	sudo apt purge docker-ce
 
@@ -78,7 +78,7 @@ For example, to search for an Ubuntu image, you would type:
 
 	docker search ubuntu
 
-# Download Docker Images
+## Download Docker Images
 
 For example, to download the latest official build of the Ubuntu 18.04 image, you would use the following image pull command:
 
