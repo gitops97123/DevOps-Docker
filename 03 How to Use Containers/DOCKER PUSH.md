@@ -22,16 +22,26 @@ Step-2:  Now, Commit the container and create new container image.
 	servera      latest    6a746ab54158   9 seconds ago    72.8MB
 Step 3. Before push the container you have to sign-in with hub.docker.com.
 	
-	# docker login 
+	student@gitOps:~$ docker login
+	Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+	Username: darwikdev11
+	Password: 
+	WARNING! Your password will be stored unencrypted in /home/student/.docker/config.json.
+	Configure a credential helper to remove this warning. See
+	https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
- 
-Step-4:  Now, again commit the container.
-	
-	# docker container commit c12d6496efb darwikdev11/ansi_server
-	# docker container commit dd4f124a197b darwikdev11/ansi_client
+	Login Succeeded
+	student@gitOps:~$`
+
 
 Step-5:  Now, Define the tag. And push the image to docker hub.
- 	
+
+	student@gitOps:~$ docker image tag servera darwikdev11/servera
+	student@gitOps:~$ docker image ls 
+	REPOSITORY            TAG       IMAGE ID       CREATED          SIZE  
+	darwikdev11/servera   latest    6a746ab54158   11 minutes ago   72.8MB
+	servera               latest    6a746ab54158   11 minutes ago   72.8MB
+
 	# docker image tag darwikdev11/ansi_server  darwikdev11/ansi_server 
 	# docker image ls 
 	# docker push darwikdev11/ansi_server
@@ -47,7 +57,10 @@ Step.6: After the pushed image,
 	Login: https://hub.docker.com 
 
 you can check your images in repository.
- 
+
+![push](https://github.com/gitops97123/DockerOps/blob/main/icons/push.PNG?raw=true)
+
+
 NOTE: Follow these instructions if you don’t have an account. 
 
 Step-3.0: If you don’t have any account, Now, signup today.
@@ -56,6 +69,7 @@ Now, go to website : http://hub.docker.com
  
 Step-3.1: If you an account, Now, sign-in.
 
+![login](https://github.com/gitops97123/DockerOps/blob/main/icons/docker_login.PNG?raw=true)
 
 Step-3.2: After sign-in, you can check your repositories in your account.
 
