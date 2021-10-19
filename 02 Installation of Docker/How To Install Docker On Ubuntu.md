@@ -12,7 +12,7 @@
 
 ## Installing pre-requisites packages 
 
-    sudo apt update sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+    sudo apt update && sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
 ## Adding GPG-KEY
 
