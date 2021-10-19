@@ -53,6 +53,7 @@ Adding docker group to Local user
 
 
 ## Search Docker Image
+
 To search for an image from the Docker Hub registry, use the search subcommand.
 For example, to search for an Ubuntu image, you would type:
 
