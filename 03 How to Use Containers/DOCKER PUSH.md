@@ -34,7 +34,7 @@ Step 3. Before push the container you have to sign-in with hub.docker.com.
 	student@gitOps:~$`
 
 
-Step-5:  Now, Define the tag. And push the image to docker hub.
+Step-4:  Now, Define the tag. And push the image to docker hub.
 
 	student@gitOps:~$ docker image tag servera darwikdev11/servera
 	student@gitOps:~$ docker image ls 
@@ -42,31 +42,30 @@ Step-5:  Now, Define the tag. And push the image to docker hub.
 	darwikdev11/servera   latest    6a746ab54158   11 minutes ago   72.8MB
 	servera               latest    6a746ab54158   11 minutes ago   72.8MB
 
-	# docker image tag darwikdev11/ansi_server  darwikdev11/ansi_server 
-	# docker image ls 
-	# docker push darwikdev11/ansi_server
+
  
-Step-6:  Now, pushing client machine.
+Step-5:  Now, pushing client machine.
 	
-	# docker push darwikdev11/ansi_client  
+	student@gitOps:~$ docker push darwikdev11/servera  
 
  Search the image in private registry.
  
-Step.6: After the pushed image, 
+Step.6: After the pushed image, checkout the website  
 	
 	Login: https://hub.docker.com 
-
-you can check your images in repository.
-
-![push](https://github.com/gitops97123/DockerOps/blob/main/icons/push.PNG?raw=true)
-
 
 NOTE: Follow these instructions if you don’t have an account. 
 
 Step-3.0: If you don’t have any account, Now, signup today.
 Now, go to website : http://hub.docker.com 
 
+![signup](https://github.com/gitops97123/DockerOps/blob/main/icons/signup.PNG?raw=true)
+
+you can check your images in repository.
+
+![push](https://github.com/gitops97123/DockerOps/blob/main/icons/push.PNG?raw=true)
  
+
 Step-3.1: If you an account, Now, sign-in.
 
 ![login](https://github.com/gitops97123/DockerOps/blob/main/icons/docker_login.PNG?raw=true)
