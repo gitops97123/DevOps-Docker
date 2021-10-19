@@ -12,6 +12,7 @@ Docker is a containerization technology that allows you to quickly build, test a
 Follow these Steps  
 
 Adding docker-ce repository. 
+
     sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
     sudo dnf repolist -v 
 
