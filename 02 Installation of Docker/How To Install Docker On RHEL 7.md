@@ -12,35 +12,35 @@ Docker is a containerization technology that allows you to quickly build, test a
 
 # Follow these Steps:  
 
-Update the latest packages. 
+## Update the latest packages. 
 
     sudo yum update
 
-Pre-requisites packages. 
+## Pre-requisites packages. 
 
 	sudo yum install yum-utils device-mapper-persistent-data lvm2
 
-Adding docker repo.
+## Adding docker repo.
 
 	sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-Installing "docker-ce" packages.
+## Installing "docker-ce" packages.
 
 	sudo yum install docker-ce
 
-Start and Enable docker services.
+## Start and Enable docker services.
 
 	sudo systemctl enable --now  docker
 
-Checking service status. 
+## Checking service status. 
 
 	sudo systemctl status docker
 
-Checking docker status. 
+## Checking docker status. 
 
 	docker --version
 
-Adding docker group to Local user 
+## Adding docker group to Local user 
 
     sudo usermod -aG docker $USER
 
@@ -84,19 +84,19 @@ It may not be the most appropriate comparison, but if you are a programmer, you 
 
 We can start, stop, remove, and manage a container with the docker container subcommand.
 
-Start a container
+## Start a container
 
     	docker container run -it ubuntu /bin/bash
 
-List running container 
+## List running container 
 
     	docker container ls 
     	docker container ls -a 
 
-Remove container
+## Remove container
 
     	docker container rm container_id 
 
-Remove stop container history.
+## Remove stop container history.
 
     	docker container rm prune -f
