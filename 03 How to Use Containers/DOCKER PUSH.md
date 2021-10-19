@@ -56,35 +56,46 @@ Step.6: After the pushed image, checkout the website
 
 NOTE: Follow these instructions if you don’t have an account. 
 
-Step-3.0: If you don’t have any account, Now, signup today.
+Step-7.0: If you don’t have any account, Now, signup today.
 Now, go to website : http://hub.docker.com 
 
 ![signup](https://github.com/gitops97123/DockerOps/blob/main/icons/signup.PNG?raw=true)
 
-you can check your images in repository.
+
+Step-7.1: If you an account, Now, sign-in.
+
+![login](https://github.com/gitops97123/DockerOps/blob/main/icons/docker_login.PNG?raw=true)
+
+Step-7.2: After sign-in, you can check your repositories in your account.
 
 ![push](https://github.com/gitops97123/DockerOps/blob/main/icons/push.PNG?raw=true)
  
 
-Step-3.1: If you an account, Now, sign-in.
+Step-7.3: Create your own repository.
 
-![login](https://github.com/gitops97123/DockerOps/blob/main/icons/docker_login.PNG?raw=true)
+ ![crepo](https://github.com/gitops97123/DockerOps/blob/main/icons/crepo.PNG?raw=true)
 
-Step-3.2: After sign-in, you can check your repositories in your account.
 
-Step-3.3: Create your own repository.
- 
-Step-3.4: tap to create a repository.
- 
+Step-7.4: tap to create a repository.
 
-Step-3.5: after the created repository, look like this : 
- 
+![crepo1](https://github.com/gitops97123/DockerOps/blob/main/icons/crepo1.PNG?raw=true)
 
-Step-3.6: For remove : go to settings, and delete the repository.
-  
-Step-4: Search a new image.
- 
-Step-4.1: now you can pull the image.
 
-	# docker pull nginx
+Step-7.5: after the created repository, look like this : 
+
+ ![crepo2](https://github.com/gitops97123/DockerOps/blob/main/icons/crepo2.PNG?raw=true)
+
+
+Step-7.6: For remove : go to settings, and delete the repository.
+
+ ![drepo](https://github.com/gitops97123/DockerOps/blob/main/icons/drepo.PNG?raw=true)
+ ![drepo1](https://github.com/gitops97123/DockerOps/blob/main/icons/drepo1.PNG?raw=true)
+
+Step-8: Search a new image.
+
+ ![srepo](https://github.com/gitops97123/DockerOps/blob/main/icons/srepo.PNG?raw=true)
+
+Step-8.1: now go back to the termincal and pull the image.
+
+	# docker pull mysql
  
