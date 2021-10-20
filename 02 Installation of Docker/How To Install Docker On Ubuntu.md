@@ -16,7 +16,7 @@
 
 ## Adding GPG-KEY
 
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 ## Adding docker-ce repository
  
@@ -56,8 +56,6 @@ When a new Docker version is released you can update the package using the stand
 	sudo apt purge docker-ce
 
 	sudo apt autoremove
-
-
 
 
 
