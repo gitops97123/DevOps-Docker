@@ -1,5 +1,4 @@
-
-
+![signup](https://github.com/gitops97123/DockerOps/blob/main/icons/logo.PNG?raw=true)
 
 
 ### Guided Exercise: 04
