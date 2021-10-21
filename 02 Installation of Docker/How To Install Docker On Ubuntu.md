@@ -41,20 +41,19 @@
 ## Adding docker group in User account 
 
 	sudo usermod -aG docker $USER
-
+	sudo chmod 777 /var/run/docker.sock 
 
 ##  Upgrading Docker
 
 When a new Docker version is released you can update the package using the standard upgrade process:
 
 	sudo apt update
-
 	sudo apt upgrade
 
 ## Uninstalling Docker: -
 
+	sudo apt remove docker-ce 
 	sudo apt purge docker-ce
-
 	sudo apt autoremove
 
 
@@ -84,10 +83,12 @@ For example, to download the latest official build of the Ubuntu 18.04 image, yo
 
 ## Image List
 To list all downloaded images type:
+	
 	docker image ls
 
 ## Remove an Image
 If for some reasons, you want to delete an image, you can do that with the image rm [image_name] subcommand:
+	
 	docker image rm ubuntu
 
 ## Docker Container
