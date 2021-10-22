@@ -41,14 +41,13 @@
 ## Adding docker group in User account 
 
 	sudo usermod -aG docker $USER
-
+	sudo chmod 777 /var/run/docker.sock 
 
 ##  Upgrading Docker
 
 When a new Docker version is released you can update the package using the standard upgrade process:
 
 	sudo apt update
-
 	sudo apt upgrade
 
 ## Uninstalling Docker: -
@@ -83,12 +82,15 @@ For example, to download the latest official build of the Ubuntu 18.04 image, yo
 
 ## Image List
 To list all downloaded images type:
+	
 	docker image ls
 
 ## Remove an Image
 If for some reasons, you want to delete an image, you can do that with the image rm [image_name] subcommand:
-	docker image rm ubuntu
-
+	
+	docker image rm -f ubuntu
+	docker rmi ubuntu 
+	
 ## Docker Container
 An instance of an image is called a container. A container represents a runtime for a single application, process, or service.
 It may not be the most appropriate comparison, but if you are a programmer, you can think of a Docker image as class and Docker container as an instance of a class.
@@ -102,10 +104,16 @@ We can start, stop, remove, and manage a container with the docker container sub
 
     	docker container ls 
     	docker container ls -a 
+	
+## List running container 
 
-## Remove container
+    	docker ps
+    	docker ps -a 
 
-    	docker container rm container_id 
+## stop & Remove container
+
+    	docker container stop container_id 
+	docker container rm container_id 
 
 ## Remove stop container history.
 
