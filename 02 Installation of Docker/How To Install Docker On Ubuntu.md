@@ -53,17 +53,16 @@ When a new Docker version is released you can update the package using the stand
 
 ## Uninstalling Docker: -
 
+	sudo apt remove docker-ce 
 	sudo apt purge docker-ce
-
 	sudo apt autoremove
-
 
 
 ## Docker Command line Interface: -
 
 	docker [option] [subcommand] [arguments]
 
-	docker –help 
+	docker --help 
 
 ## Docker Image
 
