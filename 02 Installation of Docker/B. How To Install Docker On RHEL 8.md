@@ -1,13 +1,16 @@
-# How To Install Docker On RHEL-8 / CENTOS-8/ FEDORA-35 
+Devops
+# How To Indstall Docker On RHEL-8 / CENTOS-8/ FEDORA-35 
 
 ## Prerequisites 
-- 	RHEL/CENTOS/FEDORA 64-bit operating system
+
+- **RHEL/CENTOS/FEDORA** 64-bit operating system
 - 	A user account with sudo privileges
 - 	Command-line/terminal (ctrl-alt-t or applications menu > accessories > terminal)
 
  
 
-Docker is a containerization technology that allows you to quickly build, test and deploy applications as portable, self-sufficient containers that can run virtually anywhere.
+Docker is a containerization technology that allows you to quickly build, test and deploy applications as portable, self-suffici
+t containers that can run virtually anywhere.
 
 ## Follow these Steps  
 
