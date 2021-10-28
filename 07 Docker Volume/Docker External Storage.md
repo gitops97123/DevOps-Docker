@@ -5,7 +5,7 @@ When containers are removed, data in them are also lost, so it's necessary to us
 It's possible to mount a directory on Docker Host into containers.
 
     student@gitOps:~$ sudo mkdir -p /var/lib/docker/disk01
-    student@gitOps:~$ sudo echo "i love docker" >> /var/lib/docker/disk-A/file.txt
+    student@gitOps:~$ sudo echo "i love docker" >> /var/lib/docker/disk01/file.txt
     student@gitOps:~$ docker run -it -v /var/lib/docker/disk01:/mnt ubuntu /bin/bash
     root@c2bf4bfa9980:/# df -hT
     Filesystem                        Type     Size  Used Avail Use% Mounted on
