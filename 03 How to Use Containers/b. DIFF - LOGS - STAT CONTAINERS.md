@@ -13,9 +13,12 @@
  
 ### Step-3:  Checking Logs for the container. #DO NOT USE IMAGE NAME
 
-    student@gitOps:~$ docker container diff 7c0a418ab511
-    C /root
-    A /root/.bash_history
+    student@gitOps:~$ docker container logs 7c0a418ab511
+    ...
+    2022/03/19 07:32:00 [notice] 1#1: start worker processes
+    2022/03/19 07:32:00 [notice] 1#1: start worker process 31
+    ...
+
     student@gitOps:~$ 
  
 ### Step-3:  Checking stat for the container. #DO NOT USE IMAGE NAME
