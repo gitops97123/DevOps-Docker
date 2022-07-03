@@ -18,16 +18,17 @@ Write the Dockerfile specification.
     # comment
 	INSTRUCTION ARGUMENTS	
 
-1. **LABEL**   is responsible for adding generic metadata to an image.
-1. **MAINTAINER** is responsible for setting the Author field of the generated container image. 
-1. **RUN** execute commands in a new layer on top of the current image
-1. **EXPOSE** indicates that the container listens on the specified network port at runtime.
-1. **ENV** is responsible for defining environment variables that will be available to the container 
-1. **ADD** copies files from local or remote source and add them to the container’s file system.
-1. **COPY** copies files from local or remote source and add them to the container’s file system.
-1. **USER** specifies the username 
-1. **ENTRYPOINT** specifies the default command to execute when the container is created.
-1. **CMD** provides the default arguments for the **ENTRYPOINT** instruction.
+1. **FROM**  is the docker image.
+2. **LABEL**   is responsible for adding generic metadata to an image.
+3. **MAINTAINER** is responsible for setting the Author field of the generated container image. 
+4. **RUN** execute commands in a new layer on top of the current image
+5. **EXPOSE** indicates that the container listens on the specified network port at runtime.
+6. **ENV** is responsible for defining environment variables that will be available to the container 
+7. **ADD** copies files from local or remote source and add them to the container’s file system.
+8. **COPY** copies files from local or remote source and add them to the container’s file system.
+9. **USER** specifies the username 
+10. **ENTRYPOINT** specifies the default command to execute when the container is created.
+11. **CMD** provides the default arguments for the **ENTRYPOINT** instruction.
 
 ## Using CMD and ENTRYPOINT Instructions in the Dockerfile.
 
