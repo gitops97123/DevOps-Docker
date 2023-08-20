@@ -44,26 +44,72 @@ Using a shell form:
 
 Example: 1 
 
- the following instruction causes any container that I run to display the current time. 
+ This repository contains Dockerfile of Nginx Container.
 
-    # this is a comment line
-    FROM  centos
-    LABEL  description=”This is a custom httpd container image.”
-    MAINTAINER  John doe < jdoe@xyz.com”
-    RUN  yum install -y httpd
-    EXPOSE  80
-    ENV  LogLevel “info”
-    ADD http://someserver.com/filename.pdf /var/www/html
-    COPY  ./src/ /var/www/html
-    USER  apache
-    ENTRYPOINT [“/usr/sbin/httpd”] 
-    CMD [“-D”,”FOREGROUND”]
+	# Pull base image.
+	FROM darwikdev11/new-ubuntu
+	# Install Nginx.
+	RUN \
+	  apt-get update && \
+	  apt-get install -y nginx && \
+	  rm -rf /var/lib/apt/lists/* && \
+	  echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+	  chown -R www-data:www-data /var/lib/nginx
+	
+	# Define mountable directories.
+	VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
+	
+	# Define working directory.
+	WORKDIR /etc/nginx
+	
+	# Define default command.
+	CMD ["nginx"]
+	
+	# Expose ports.
+	EXPOSE 80
+	EXPOSE 443
+                                         
 
  when the Dockerfile is ready to run, execute the command:- 
 
-     # docker build -t tagname:v1 . 
-     # docker image ls 
+	# docker build -t 01 . 
+	# docker image ls 01
+	root@devops-01:~/01# docker image ls 01
+	REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+     	01           latest    5feafaf85934   6 minutes ago   337MB
 
+     	#  docker container run -itd -p 82:80 01  
+	root@devops-01:~/01# docker container run -itd -p 82:80  01
+	9856f8ba3e91852e2dea8ea42148db0fba9f7bdb99f438efeaf9572dd1dcb355
+	root@devops-01:~/01# docker container ls 
+	CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS                                        NAMES
+	9856f8ba3e91   01        "nginx"   4 seconds ago   Up 3 seconds   443/tcp, 0.0.0.0:82->80/tcp, :::82->80/tcp   busy_mayer
+	root@devops-01:~/01# curl http://localhost:82 
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<title>Welcome to nginx!</title>
+	<style>
+	    body {
+	        width: 35em;
+	        margin: 0 auto;
+	        font-family: Tahoma, Verdana, Arial, sans-serif;
+	    }
+	</style>
+	</head>
+	<body>
+	<h1>Welcome to nginx!</h1>
+	<p>If you see this page, the nginx web server is successfully installed and
+	working. Further configuration is required.</p>
+	
+	<p>For online documentation and support please refer to
+	<a href="http://nginx.org/">nginx.org</a>.<br/>
+	Commercial support is available at
+	<a href="http://nginx.com/">nginx.com</a>.</p>
+	
+	<p><em>Thank you for using nginx.</em></p>
+	</body>
+	</html>
 
 Example: 2 
 
