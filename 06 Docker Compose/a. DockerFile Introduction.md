@@ -113,16 +113,18 @@ Example: 1
 
 Example: 2 
 
-    FROM ubuntu:18.04
-    LABEL NAME "sam"
-    RUN apt-get update &&  apt install -y python3-pip
-    COPY test.py  /tmp
-    COPY backup.tar /tmp
-    WORKDIR /tmp
-    #ENTRYPOINT [ "python3", "./test.py" ]
+	FROM ubuntu:18.04
+	LABEL NAME "sam"
+	RUN apt-get update &&  apt install -y python3-pip
+	COPY test.py  /tmp
+	COPY backup.tar /tmp
+	WORKDIR /tmp
+	ENTRYPOINT [ "python3", "./test.py" ]
 
+when the Dockerfile is ready to run, execute the command:- 
 
-
+ 	root@devops-01:~/02# docker container run -it py 
+	hello world
 
 Example: 3 
 
