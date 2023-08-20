@@ -160,7 +160,13 @@ Example: 4
     RUN useradd -c /bin/sh -d /home/sam -m sam && echo sam:redhat | chpasswd
     ENV NOTVISIBLE "in users profile"
     RUN echo "export VISIBLE=now" >> /etc/profile
-    
     EXPOSE 22
     CMD ["/usr/sbin/sshd", "-D"]
 
+    root@devops-01:~/04# docker ps
+    CONTAINER ID   IMAGE              COMMAND               CREATED              STATUS              PORTS     NAMES
+    0788b4a9f6b3   ubuntu-vm:latest   "/usr/sbin/sshd -D"   About a minute ago   Up About a minute   22/tcp    reverent_edison
+
+    root@devops-01:~/04# ssh sam@172.17.0.3
+    sam@172.17.0.3's password: 
+    $_
