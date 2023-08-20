@@ -15,8 +15,8 @@ The Docker command can use the files in a working directory to build an image. A
 
 Write the Dockerfile specification.
 
-    # comment
-	INSTRUCTION ARGUMENTS	
+# comment
+INSTRUCTION ARGUMENTS	
 
 1. **FROM**  is the docker image.
 2. **LABEL**   is responsible for adding generic metadata to an image.
