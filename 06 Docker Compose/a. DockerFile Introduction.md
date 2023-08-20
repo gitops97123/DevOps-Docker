@@ -128,26 +128,26 @@ when the Dockerfile is ready to run, execute the command:-
 
 Example: 3 
 
-    	# this is a comment line
-    	FROM  centos
-    	LABEL description="This is a custom httpd container image"
-    	MAINTAINER sam anuragi <darwikdev@gmail.com>
-    	RUN yum install -y httpd
-    	EXPOSE 80
-    	ENV LogLevel "info"
-    	COPY index.html /var/www/html
-	ENTRYPOINT ["/usr/sbin/httpd"]
-	CMD ["-D","FOREGROUND"]
+    # this is a comment line
+    FROM  centos
+    LABEL description="This is a custom httpd container image"
+    MAINTAINER sam anuragi <darwikdev@gmail.com>
+    RUN yum install -y httpd
+    EXPOSE 80
+    ENV LogLevel "info"
+    COPY index.html /var/www/html
+    ENTRYPOINT ["/usr/sbin/httpd"]
+    CMD ["-D","FOREGROUND"]
 	
-	root@devops-01:~/03# docker container run -itd  -p 82:80 apache:v2 
-	73391f4ccc57e03b76c85a355b4489f206500e59e2d54fd95ee72532130b46c4
+    root@devops-01:~/03# docker container run -itd  -p 82:80 apache:v2 
+    73391f4ccc57e03b76c85a355b4489f206500e59e2d54fd95ee72532130b46c4
 	
-	root@devops-01:~/03# docker ps
-	CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                               NAMES
-	73391f4ccc57   apache:v2   "/usr/sbin/httpd -D …"   3 seconds ago   Up 2 seconds   0.0.0.0:82->80/tcp, :::82->80/tcp   goofy_mendel
+    root@devops-01:~/03# docker ps
+    CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                               NAMES
+    73391f4ccc57   apache:v2   "/usr/sbin/httpd -D …"   3 seconds ago   Up 2 seconds   0.0.0.0:82->80/tcp, :::82->80/tcp   goofy_mendel
 	
-	root@devops-01:~/03# curl http://localhost:82
-	hello world
+    root@devops-01:~/03# curl http://localhost:82
+    hello world
 
 Example: 4 
 
