@@ -100,12 +100,12 @@ Create a service with a config and specify the target location and file mode:
 Configs are located in / in the container if no target is specified. If no target is specified, the name of the config is used as the name of the file in the container. If a target is specified, that is used as the filename.
 Create a service with a rolling update policy
 
-$ docker service create \
-  --replicas 10 \
-  --name redis \
-  --update-delay 10s \
-  --update-parallelism 2 \
-  redis:3.0.6
+    $ docker service create \
+      --replicas 10 \
+      --name redis \
+      --update-delay 10s \
+      --update-parallelism 2 \
+      redis:3.0.6
 
 When you run a service update, the scheduler updates a maximum of 2 tasks at a time, with 10s between updates. For more information, refer to the rolling updates tutorial.
 Set environment variables (-e, --env)
