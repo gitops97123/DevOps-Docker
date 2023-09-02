@@ -65,7 +65,7 @@ Once all the tasks are created and RUNNING, the actual number of tasks is equal 
 
 Use the --secret flag to give a container access to a secret.
 
-## Create a service specifying a secret:
+Create a service specifying a secret:
 
     $ docker service create --name redis --secret secret.json redis:3.0.6
     4cdgfyky7ozwh3htjfw0d12qv
